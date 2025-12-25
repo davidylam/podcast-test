@@ -17,6 +17,11 @@ on:
         required: true
         # The data type of the input
         type: string
+      message:
+        description: 'what is the message'
+        default: 'NA'
+        required: true
+        type: string
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -29,4 +34,4 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: echo "Hello ${{ inputs.name }}"
+      run: echo "Hello ${{ inputs.name }} Message >>${{inputs.message}}<<"
