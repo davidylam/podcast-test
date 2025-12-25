@@ -35,3 +35,8 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }} Message ${{inputs.message}} Branch $GITHUB_WORKSPACE"
+    - name: Print branch name
+      run: |
+          echo "Current branch: ${GITHUB_REF##*/}"
+          echo "GITHUB_REF: ${GITHUB_REF}"
+          echo "GITHUB_REF_NAME: ${GITHUB_REF_NAME}"
