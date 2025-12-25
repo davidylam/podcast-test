@@ -34,4 +34,4 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: echo "Hello ${{ inputs.name }} Message >>${{inputs.message}}<<"
+      run: echo "Hello ${{ inputs.name }} Message ${{inputs.message}} Branch $GITHUB_WORKSPACE"
